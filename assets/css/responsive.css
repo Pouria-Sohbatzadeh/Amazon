@@ -1012,47 +1012,52 @@
 
     .middle__product-upper {
         justify-content: space-between;
-        height: auto;/* A shared height, So we can properly align all the images and their text to be on the same (relative) base */
+        height: 60%;/* A shared height, So we can properly align all the images and their text to be on the same (relative) base */
         width: 100%;
     }
 
     .middle__product-imgdiv {
-        width: 92%;/* The apt size for the 1st images of the products */
-        display: flex;
-        max-width: 250px;
-        max-height: 258px;
-        /* Theheight has to be manually limited so the image actually scales the height. */
+        max-height: 250px;/* forcing the div tag to grow a height so the images retain their proper scaling */
     }
 
-
-    .middle__product-imgdivII {
-        width: 80%;/* The apt size for the 2nd images of the products */
+    .middle__product-imgdivI {
+        width: 80%;/* The apt size for the 1st images of the products */
     }
+
 
     .middle__product-imgdivIII {
-        position: relative;
-        top: 50px;
-        width: 100%;/* The apt size for the 3rd images of the products */
+        top: 10%;/* Realigning the image */
+        
+    }
+
+    .middle__product-imgIII {
+        width: 120%;/* The apt values that the third image needs to take from it div */
+        
     }
     
     .middle__product-imgdivIV {
         position: relative;
-        top: 30px;
+        top: 10%;
     }
     
     .middle__product-imgdivV, .middle__product-imgdivVI {
         position: relative;
         width: 60%; /* The apt size for the last two images of the products */
-        top: 30px;
+        /* border: 3px solid black; */
+        top: 0%;/* Forcefulyy aligning the last two image with the other product images */
+        
     }
     
+    .middle__product-imgdivV {
+        position: relative;
+        top: 7%;/* A minor adjustment for the fifth product image */
+        
+    }
 
 
     .middle__product-img--relocation {
-        position: relative;
-        top: 0px; /* Don't remove this, It causes the last product image to be PERFECTLY centered within not only its <div> but also with the other images */
+        top: -10px;
     }
-
     
 
 
