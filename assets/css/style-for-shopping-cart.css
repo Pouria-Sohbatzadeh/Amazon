@@ -65,7 +65,7 @@ body {
 /* The above are the empty basket design. */
 
 
-/* The below are the designs for when the basket is full */
+/* The below are the designs for when the basket is full. */
 .item {
     margin-top: 20px;
     padding: 6px 30px;
@@ -137,13 +137,13 @@ body {
     align-self: center;
 } */
 
-.left-bottom-img {
+/* .left-bottom-img {
     width: 100%;
-}
+} */
 /* These are the sizes for the image of the 1st product. */
 
 /* These are the sizes for the image of the 2nd product. */
-/* .left-bottom-imgDivII {
+.left-bottom-imgDivII {
     width: 320px;
     overflow: hidden;
     align-self: center;
@@ -151,11 +151,11 @@ body {
 
 .left-bottom-imgII {
     width: 100%;
-} */
+}
 /* These are the sizes for the image of the 2nd product. */
 
 /* These are the sizes for the image of the 3rd product. */
-.left-bottom-imgDivIII {
+/* .left-bottom-imgDivIII {
     width: 250px;
     overflow: hidden;
     align-self: center;
@@ -163,7 +163,7 @@ body {
 
 .left-bottom-imgIII {
     width: 100%;
-}
+} */
 /* These are the sizes for the image of the 3rd product. */
 /* .left-bottom-imgDiv section ends */
 
@@ -406,26 +406,28 @@ body {
 
     /* The adjustment for the 2nd image of the product */
     /* .left-bottom-imgDivII {
-        align-self: flex-start; */
+        align-self: flex-start;
+        flex-grow: 0.5; */
         /* Aligning the image with other content */
         
     /* } */
 
     /* .left-bottom-imgII {
         position: relative;
-        right: 30px; */
+        right: 30px;
+        flex-grow: 0.5; */
         /* Changing the location of the image within the box to be more aligned with other content */
     /* } */
     /* The adjustment for the 2nd image of the product */
 
     /* The adjustment for the 3rd image of the product */
-    .left-bottom-imgDivIII {
+    /* .left-bottom-imgDivIII {
         align-self: flex-start;
         width: 20%;
-        flex-grow: 0.5;
+        flex-grow: 0.5; */
         /* Aligning the image with other content */
         
-    }
+    /* } */
     /* The adjustment for the 3rd image of the product */
 
     .items__boxes-left-totalCost {
@@ -450,7 +452,7 @@ body {
     }
 
     .item__boxes-left {
-        padding: 50px 45px 70px;
+        padding: 40px 45px 70px;
         width: 95%;
         max-width: 1182px;
         flex-grow: 0.5;
@@ -459,6 +461,14 @@ body {
 
     .item__left-top-headline {
         font-size: 36px;
+    }
+
+    .item__left-bottom-allInfo {
+        width: 80%; 
+        /* Limiting the width of the texts alognside the image so they don't end up on top of it, This is for left-bottom-imgDiv and left-bottom-imgDivII . */
+
+        /* width: 63%; */
+        /* This is the width value for when the left-bottom-imgDivIII is present */
     }
 
     .item__productInfo-genralDescription {
@@ -477,10 +487,10 @@ body {
     }
 
     .item__boxes-confirm  {
-        padding: 10px 15px; /* Giving the content inside some breating room */
+        padding: 10px 15px; /* Giving the content inside some space for their width */
         
         width: 287px;/* For some reason the actual width in the webpage is 42px smaller than the value you will enter here, Keet that in mind when putting in your value */
-        height: 175px;/* Making sure the height doesn't stretch to the bottom of the webpage (I still do not know WHY did happens */
+        height: 175px;/* Making sure the height doesn't stretch to the bottom of the webpage. */
         
     }
 
@@ -512,6 +522,4 @@ body {
         width: 100%;
     }
 }
-/* Due to designing for both a laptop and a computer's screen size, We've reached a middle ground where the laptop version is fantastic, The computer version is 
-MOSTLY finished, But looks like it needs a few size and aligning adjustments. */
-/* Putting these @medias in the responsive is HIGHLY ill advised, Thanks to back-to-top:  having unique margin-top:  values here that will interfere with other pages. */
+/* Putting these @medias in the responsive is HIGHLY ill advised, Thanks to back-to-top:  having unique margin-top:  values here, that WILL interfere with other pages. */

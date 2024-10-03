@@ -3,6 +3,13 @@
 @import "./variables-colors.css";
 @import "./ultilities.css";
 
+
+body {
+    background-color: var(--middle-bg);
+}
+/* On of the two files where the body has a bg color */
+
+
 .back-to-top {
     height: 46px;
     background-color: var(--back-to-top-blue);
@@ -452,7 +459,7 @@ have to move the button itself to the remainder of the webpage so the user CAN c
 
 .middle {
     padding: 0px 13px 0px 13px;
-    background-color: var(--middle-bg);
+    
     height: 3944px;
 }
 
@@ -547,35 +554,39 @@ have to move the button itself to the remainder of the webpage so the user CAN c
 }
 
 .middle__product {
+    width: 100%;
     border-radius: .25rem;
     padding: 55px 15px 6px 15px;
     background-color: #fff;
-    height: 594px;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 11px 0px;
+    justify-content: space-between;
     cursor: pointer;
 
 }
 
 .middle__product-upper {
-    width: 100%;
+    border-bottom: 1px solid var(--seperation-line);
     display: flex;
     flex-direction: column;
-    height: 330px;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--seperation-line);
+    
 }
 
 .middle__product-imgdiv {
-    width: 247px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .middle__product-img {
-    width: inherit;
+    width: 100%;
 }
 
 .middle__product-name {

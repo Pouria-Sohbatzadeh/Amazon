@@ -1,4 +1,4 @@
-/* tablet version */
+/* tablet version for index */
 @media only screen and (min-width: 768px) {
     .header {
         height: 60px;
@@ -558,7 +558,11 @@
         font-size: 14px;
     }
 
+
+    
+
     .middle__items {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -567,49 +571,58 @@
     }
 
     .middle__product-path {
-        height: 492px;/* Determines the height of each Product Box */
-        width: 32.5%;/* Determines the width of each Product Box */
+        display: flex;
+        width: 32.91%;
     }
 
     .middle__product {
-        height: 492px;
         width: 100%;
+        height: 100%;
         gap: 21px  0px;
-        
-
+        padding: 15px 15px 16px; /* The distancing from the top border is lessened */
+        /* justify-content: space-between; */
     }
 
     .middle__product-upper {
-        height: 210px;
+        justify-content: space-between;
+        height: 247.5px;/* A shared height, So we can properly align all the images and their text to be on the same (relative) base */
+        width: 100%;
     }
 
     .middle__product-imgdiv {
-        width: 124px;
+        width: 92%;/* The apt size for the 1st images of the products */
+        display: flex;
+        max-height: 186px;
     }
 
-    .middle__product-img {
-        width: inherit;
+    .middle__product-imgdivII {
+        width: 80%;/* The apt size for the 2nd images of the products */
     }
 
-
-    .middle__productThree-imgdiv {
-        width: 230px;
+    .middle__product-imgdivIII {
+        position: relative;
+        top: 50px;
+        width: 100%;/* The apt size for the 3rd images of the products */
     }
-
-    .middle__productFour-imgdiv {
-        width: 214px;
-        overflow: hidden;
+    
+    .middle__product-imgdivIV {
+        position: relative;
+        top: 30px;
     }
-
-    .middle__productFifth-imgdiv {
-        width: 121px;
-        overflow: hidden;
+    
+    .middle__product-imgdivV, .middle__product-imgdivVI {
+        position: relative;
+        width: 60%; /* The apt size for the last two images of the products */
+        top: 30px;
     }
+    
+
 
     .middle__product-img--relocation {
         position: relative;
-        bottom: 15px;
+        top: 0px; /* Don't remove this, It causes the last product image to be PERFECTLY centered within not only its <div> but also with the other images */
     }
+
     /* The middle section ends */
 
 
@@ -717,9 +730,6 @@
 }
 
 }
-
-/* Usually I would put the reponsive for The tablet/Computer versions of shopping-cart here, But the margin-top value that's ONLY applied to back-to-top there
- messes with other pages. Go to the style-for-hopping-cart in order to make your desired responsive adjustments */
 
 
 
@@ -971,40 +981,77 @@
     }
 
     .middle__declaration {
-        width: 96%;
+        width: 98%;
         justify-content: center;
     }
 
-    .middle__items {
+    .middle__items{
+        width: 98%;
         justify-content: flex-start;
-        width: 96%;
-        gap: 10px 6px;/* The horizantal and vertical distance between the boxes */
+        gap: 1% 0.5%;
     }
 
     .middle__product-path {
-        width: 24.5%;/* Determines the width of each Product Box */
+        height: auto;
+        flex-basis: 19.6%;
+        max-width: 19.6%;
+        flex-grow: 2;
     }
 
-
+    .middle__product {
+    width: 100%;
+    height: auto;
+    gap: 21px  0px;
+    padding: 15px 15px 16px; /* The distancing from the top border is lessened */
+    /* justify-content: space-between; */
+    }
 
     .middle__product-upper {
-        height: 210px;
+        justify-content: space-between;
+        height: auto;/* A shared height, So we can properly align all the images and their text to be on the same (relative) base */
+        width: 100%;
     }
-
 
     .middle__product-imgdiv {
-        width: 124px;
+        width: 92%;/* The apt size for the 1st images of the products */
+        display: flex;
+        max-width: 250px;
+        max-height: 258px;
+        /* Theheight has to be manually limited so the image actually scales the height. */
     }
 
-    .middle__product-img {
-        width: inherit;
+
+    .middle__product-imgdivII {
+        width: 80%;/* The apt size for the 2nd images of the products */
     }
 
-
-    .middle__productFour-imgdiv {
-        width: 193px;
-        overflow: hidden;
+    .middle__product-imgdivIII {
+        position: relative;
+        top: 50px;
+        width: 100%;/* The apt size for the 3rd images of the products */
     }
+    
+    .middle__product-imgdivIV {
+        position: relative;
+        top: 30px;
+    }
+    
+    .middle__product-imgdivV, .middle__product-imgdivVI {
+        position: relative;
+        width: 60%; /* The apt size for the last two images of the products */
+        top: 30px;
+    }
+    
+
+
+    .middle__product-img--relocation {
+        position: relative;
+        top: 0px; /* Don't remove this, It causes the last product image to be PERFECTLY centered within not only its <div> but also with the other images */
+    }
+
+    
+
+
     /* The middle section ends */
 
     /* The footer section begins */
@@ -1012,6 +1059,10 @@
         padding: 0px 115px 0 115px;
     }
     /* The footer section ends */
+
+    .back-to-top {
+        margin-top: 130px;
+    }
 
 }
 
