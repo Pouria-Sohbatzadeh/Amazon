@@ -109,8 +109,8 @@
     font-family: nunito;
     font-weight: 400;
     border: none;
-    height: inherit;
-    width: inherit;
+    height: 100%;
+    width: 100%;
     border-radius: .25rem;
     padding: 0px 0px 0px 52px;
     font-size: 14px;

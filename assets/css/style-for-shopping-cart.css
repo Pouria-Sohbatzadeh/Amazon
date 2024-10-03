@@ -138,7 +138,7 @@ body {
 } */
 
 .left-bottom-img {
-    width: inherit;
+    width: 100%;
 }
 /* These are the sizes for the image of the 1st product. */
 
@@ -150,7 +150,7 @@ body {
 }
 
 .left-bottom-imgII {
-    width: inherit;
+    width: 100%;
 } */
 /* These are the sizes for the image of the 2nd product. */
 
@@ -162,7 +162,7 @@ body {
 }
 
 .left-bottom-imgIII {
-    width: inherit;
+    width: 100%;
 }
 /* These are the sizes for the image of the 3rd product. */
 /* .left-bottom-imgDiv section ends */
@@ -363,6 +363,8 @@ body {
 
     }
 
+    
+
     .item__boxes-left-bottom {
         overflow: hidden;
         display: flex;
@@ -377,6 +379,15 @@ body {
         
         width: 70%;
         /* This is the width value for when the left-bottom-imgDivIII is present */
+    }
+
+    .item__bottom-productInfo-genral {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .item__productInfo-genralDescription {
+        width: 80%;
     }
 
     /* The adjustment for the 1st image of the product */
@@ -410,7 +421,8 @@ body {
     /* The adjustment for the 3rd image of the product */
     .left-bottom-imgDivIII {
         align-self: flex-start;
-        width: 180px;
+        width: 20%;
+        flex-grow: 0.5;
         /* Aligning the image with other content */
         
     }
@@ -423,24 +435,43 @@ body {
 
 @media only screen and (min-width: 1024px) {
     .item {
-        padding: 6px 15px;/* To give both the boxes some room for their width */
-        
+        padding: 6px 30px;/* To give both the boxes some room for their width */
     }
 
     .item__boxes {
         flex-direction: row;
         gap: 0px 20px;
         width: 985px;
+        height: auto;
+        padding: 0 0 0 0;
+        flex-grow: 1;
         /* For SOME reason (AGAIN!) the width that's given to our content is rougly 260px smaller than the one given in the webpage. */
+        justify-content: flex-start;
     }
 
     .item__boxes-left {
-        width: 90%;
+        padding: 50px 45px 70px;
+        width: 95%;
+        max-width: 1182px;
+        flex-grow: 0.5;
+        gap: 20px 0px;
+    }
+
+    .item__left-top-headline {
+        font-size: 36px;
+    }
+
+    .item__productInfo-genralDescription {
+        font-size: 18px;
+        flex-grow: 0.4;
+    }
+
+    .item__productInfo-genralPrice {
+        font-size: 18px;
     }
 
     .item__left-bottom-purpose {
         flex-direction: row;
-        align-self: flex-start; 
         gap: 0px 10px;/* Distancing the 1st "this will be a gift" and "learn more"  */
         
     }
@@ -467,10 +498,10 @@ body {
         text-align: right;
     }   
 
+
+
     .item__confirm-purpose-clarifications {
-        width: 100%;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     .item__confirm-purpose-a {

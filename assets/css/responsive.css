@@ -777,6 +777,7 @@
         height: 42px;
         width: 347.5px;
         position: relative;
+        flex-grow: 1;
     }
 
     .header__categories-icon::after {
@@ -804,6 +805,7 @@
 
     .header__search-input {
         padding: 0px 0px 0px 56.5px;
+        
     }
 
     .header__send {
