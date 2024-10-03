@@ -966,6 +966,10 @@
     /* The options section ends */
 
     /* The middle section begins */
+    .middle {
+        height: 1453px;
+    }
+
 
     .middle__main {
         height: 78%;/* Responisble for gradient height, Be wary that it is less than the height of .middle */
@@ -1060,9 +1064,7 @@
     }
     /* The footer section ends */
 
-    .back-to-top {
-        margin-top: 130px;
-    }
+
 
 }
 
