@@ -16,6 +16,7 @@ html {
 body {
   font-family: nunito;
   font-weight: 400;
+  background-color: var(--middle-bg);
 }
 a {
   text-decoration: none;

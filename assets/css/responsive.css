@@ -966,9 +966,6 @@
     /* The options section ends */
 
     /* The middle section begins */
-    .middle {
-        height: 1453px;
-    }
 
 
     .middle__main {
@@ -1138,52 +1135,45 @@
 
 .product__order {
     width: 227px;
-    /* height: auto; */
-    /* This "auto" value normally would allow the box to expand as the content in it grew, Now it's bugged, 
-    Now it increases the height the to be the same value as product__explainations-all. */
-    /* It's supposed to be 540px when the see more text is not expanded, And 580px wen expanded. For anyone
-    who has the knowledge to fix this */
 
 
-    /* Now our method for fixing the box not increasing in height is as follows:(The numbered comments are the steps) */
  
-    max-height: 475px;  
-    /* 1 - first we set a height, for visuals sake, However it has to BARELY fit "see more" inside product__order. */
+    max-height: 450px; /* 1: The height has to BARELY fit "see more" inside product__order. */
+   
     
-    padding: 6px 0px;/* 2 - the horizantal padding that container brings must be erased, So the height increase of 
+    padding: 6px 0px;/* 2: the horizantal padding that container brings must be erased, So the height increase of 
     product__order-supprt-hidden looks natural. */
     
     flex-direction: column;
     border-bottom: none;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    /* 3 -Remove the rounding is set to zero, As now we give those values to product__order-supprt-hidden, In order
-    to make it look the countinuation of the box. */
+    /* 3: Remove the rounding is set to zero In order to make the countinuation of the box look natural. */
     justify-content: space-between;
 }
 
-/* 4 -We give the horizantal padding of product__order to the element tags that contain the content. */
+/* 4: We give the horizantal padding of product__order to the element tags that contain the content. */
 
 .product__order-buy {
     padding: 0px 7px;
-    /* 4.1 */
+    /* 4.1: repeat 4 */
 }
 
 .product__order-delivery {
     width: 100%; /* Giving space for the text */
    
     padding: 0px 7px;
-    /* 4.2*/
+    /* 4.2: repeat 4 */
 }
 
 .product__order-deliveryII {
     padding: 0 7px;
-    /* 4.3*/
+    /* 4.3: repeat 4 */
 }
 
 .product__order-availability {
     padding: 0 7px;
-    /* 4.4*/
+    /* 4.4: repeat 4 */
 }
 
 .product__order-request-confirm {
@@ -1204,40 +1194,55 @@
 
 .product__order-shipping {
     padding: 0px 7px;
-    /* 4.5*/
+    /* 4.5: repeat 4 */
 }
 
 .product__order-sold {
     padding: 0px 7px;
-    /* 4.6*/
+    /* 4.6: repeat 4 */
 }
 
 .product__order-returns {
     padding: 0px 7px;
-    /* 4.7*/
+    /* 4.7: repeat 4 */
+}
+
+.amazon-com, .product__order-returns-explain, .product__support-hidden-textsII {
+    width: 100px;
 }
 
 .product__order-support {
-    /* width: 227px; */
-    /* The working version */
-
-    width: 101.7%;
+    width: 101.7%;/* 5: The width needed to be for the see more box to be perfectky centered in product__order */
+    
     padding: 0px 7px 6px;
+    /* 6: Given both the horizantal padding of product__order, And the bottom-padding to properly align the text */
     position: relative;
     transform: translateX(-2px);
     border-left: 2px solid var(--category-hover);
     border-right: 2px solid var(--category-hover);
     border-bottom: 2px solid var(--category-hover);
     border-radius: .25rem;
+    /* 7: given the rounded borders to make the see more/less box look like the countinuation of product__order */
 }
 
 .product__order-supprt-hidden {
-    padding: 0px 10px 6px;
-    width: 227px;
+    padding: 0px 7px 6px;
+    /* 8: Given both the horizantal padding of product__order, And the bottom-padding to properly align the text */
+
+    
+    width: 226.78px;
     height: auto;
+    /* 9:Setting the height back to normal, As height: 0 doesn't properly make the submenu disappear in this occasion */
+    
     position: absolute;
-    opacity: 0;
-    right: -1.6px;
+
+    display: none;/* Disapearing the submenu */
+
+    
+    right: 50.2%;
+    transform: translateX(50.2%);
+    /* Centering the submenu, These values are slightly different than normal, BUT DON'T CHANGE IT. */
+    
     background-color: #fff;
     border-left: 2px solid var(--category-hover);
     border-right: 2px solid var(--category-hover);
@@ -1247,9 +1252,14 @@
 }
 
 .product__order-support-input:checked ~ .product__order-supprt-hidden {
-    
-    opacity: 1;
+    display: flex;
 
 }
+
+.product__support-hidden-texts {
+    justify-content: space-between;
+}
+
+
 
 }

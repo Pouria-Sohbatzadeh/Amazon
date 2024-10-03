@@ -4,11 +4,6 @@
 @import "./ultilities.css";
 @import "./style.css";
 
-body {
-    background-color: var(--body-color);    /* This page is the only page where the body has a different color, Messing with reset will ruin other webpages */
-
-}
-
 /* .notice {
     display: flex;
     justify-content: center;
@@ -221,7 +216,8 @@ body {
 
 .item__left-bottom-purpose {
     display: flex;
-    justify-content: space-between;
+    justify-content: normal;
+    gap: 0px 10px;
     align-items: center;
 }
 
@@ -484,6 +480,10 @@ body {
         flex-direction: row;
         gap: 0px 10px;/* Distancing the 1st "this will be a gift" and "learn more"  */
         
+    }
+
+    .subtotal-one {
+        font-size: 18px;
     }
 
     .item__boxes-confirm  {

@@ -4,6 +4,10 @@
 @import "./ultilities.css";
 @import "./style.css";
 
+body {
+    background-color: #fff;
+    /* The only page with a pure white body background */
+}
 
 /* Start of the adjustments to the webpage. */
 
@@ -969,6 +973,7 @@
 }
 
 .product__order-support {
+    font-size: 13px ;
     position: relative;
     height: auto;
 }

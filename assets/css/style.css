@@ -4,11 +4,6 @@
 @import "./ultilities.css";
 
 
-body {
-    background-color: var(--middle-bg);
-}
-/* On of the two files where the body has a bg color */
-
 
 .back-to-top {
     height: 46px;
