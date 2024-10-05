@@ -1093,6 +1093,7 @@
 .product {
     flex-direction: row;
     padding: 6px 10px;
+    align-items: flex-start;
     /* Puts the product__picture-div, product__explaination and product__order in the horizantal axis */
 }
 
@@ -1138,43 +1139,19 @@
 
 
  
-    max-height: 450px; /* 1: The height has to BARELY fit "see more" inside product__order. */
+    height: auto; /* 1: The height has to BARELY fit "see more" inside product__order. */
    
     
-    padding: 6px 0px;/* 2: the horizantal padding that container brings must be erased, So the height increase of 
+    padding: 6px 7px;/* 2: the horizantal padding that container brings must be erased, So the height increase of 
     product__order-supprt-hidden looks natural. */
     
     flex-direction: column;
-    border-bottom: none;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    /* 3: Remove the rounding is set to zero In order to make the countinuation of the box look natural. */
+
     justify-content: space-between;
 }
 
 /* 4: We give the horizantal padding of product__order to the element tags that contain the content. */
 
-.product__order-buy {
-    padding: 0px 7px;
-    /* 4.1: repeat 4 */
-}
-
-.product__order-delivery {
-    width: 100%; /* Giving space for the text */
-   
-    padding: 0px 7px;
-    /* 4.2: repeat 4 */
-}
-
-.product__order-deliveryII {
-    padding: 0 7px;
-    /* 4.3: repeat 4 */
-}
-
-.product__order-availability {
-    padding: 0 7px;
-    /* 4.4: repeat 4 */
-}
 
 .product__order-request-confirm {
     flex-direction: column;
@@ -1192,62 +1169,19 @@
     width: 100%;
 }
 
-.product__order-shipping {
-    padding: 0px 7px;
-    /* 4.5: repeat 4 */
-}
-
-.product__order-sold {
-    padding: 0px 7px;
-    /* 4.6: repeat 4 */
-}
-
-.product__order-returns {
-    padding: 0px 7px;
-    /* 4.7: repeat 4 */
-}
 
 .amazon-com, .product__order-returns-explain, .product__support-hidden-textsII {
     width: 100px;
 }
 
 .product__order-support {
-    width: 101.7%;/* 5: The width needed to be for the see more box to be perfectky centered in product__order */
     
-    padding: 0px 7px 6px;
-    /* 6: Given both the horizantal padding of product__order, And the bottom-padding to properly align the text */
-    position: relative;
-    transform: translateX(-2px);
-    border-left: 2px solid var(--category-hover);
-    border-right: 2px solid var(--category-hover);
-    border-bottom: 2px solid var(--category-hover);
-    border-radius: .25rem;
     /* 7: given the rounded borders to make the see more/less box look like the countinuation of product__order */
 }
 
 .product__order-supprt-hidden {
-    padding: 0px 7px 6px;
-    /* 8: Given both the horizantal padding of product__order, And the bottom-padding to properly align the text */
-
-    
-    width: 226.78px;
-    height: auto;
-    /* 9:Setting the height back to normal, As height: 0 doesn't properly make the submenu disappear in this occasion */
-    
-    position: absolute;
 
     display: none;/* Disapearing the submenu */
-
-    
-    right: 50.2%;
-    transform: translateX(50.2%);
-    /* Centering the submenu, These values are slightly different than normal, BUT DON'T CHANGE IT. */
-    
-    background-color: #fff;
-    border-left: 2px solid var(--category-hover);
-    border-right: 2px solid var(--category-hover);
-    border-bottom: 2px solid var(--category-hover);
-    border-radius: .25rem;
 
 }
 
